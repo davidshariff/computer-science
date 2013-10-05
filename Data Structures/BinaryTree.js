@@ -142,30 +142,36 @@
         if (!node) {
             return null;   
         }
-        
-        // case 1 - two children
+            
+            // case 1 - two children
         if (node.left && node.right) {
             
             // find the highest node on the left subtree 
             // copy it + its parent
             
-            var HighestLeft         = node.left,
-                HighestLeftParent   = node;
+            var replacement         = node.left,
+                replacementParent   = node;
             
-            while (HighestLeft.right) {
-                HighestLeftParent   = HighestLeft;
-                HighestLeft         = HighestLeft.right;
+            while (replacement.right) {
+                replacementParent   = replacement;
+                replacement         = replacement.right;
             }
             
             // copy children from node to be deleted
-            HighestLeft.left = node.left;
-            HighestLeft.right = node.right;
+            replacement.left = node.left;
+            replacement.right = node.right;
             
             // remove the highest left node
-            HighestLeftParent.right = null;
+            replacementParent.right = null;
             
             // update parent to point to highest left node
-            parent[dir] = HighestLeft;
+            if (dir) {
+                parent[dir] = replacement;
+            }
+            // delete root node
+            else {
+                this.root = replacement;
+            }
             
         }
         // case 2 - no children
@@ -180,6 +186,7 @@
         // cleanup deleted node
         node = null;
         
+        
     };
     
     var tree = new BinaryTree();
@@ -192,7 +199,7 @@
     tree.insert(25);
 
     tree.locate(15);
-    tree.remove(15);
+    tree.remove(20);
 
     tree.printPreOrder(tree.root);
     
