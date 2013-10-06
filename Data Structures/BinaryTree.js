@@ -42,7 +42,6 @@
         else {
             // found the matching node
             if (find === subtree.val) {
-                console.log(subtree);
                 return subtree;
             }
             else if (find < subtree.val) {
@@ -186,6 +185,34 @@
         // cleanup deleted node
         node = null;
         
+    };
+    
+    BinaryTree.prototype.breadthFirstSearch = function(val) {
+        
+        var queue   = [this.root],
+            current = null;
+
+        while (queue[0]) {
+            
+            current = queue.shift();
+            
+            if (val === current.val) {
+                return current;
+            }
+            else {
+                
+                if (current.left) {
+                    queue.push(current.left);
+                }
+                if (current.right) {
+                    queue.push(current.right);
+                }
+                
+            }
+            
+        }
+        
+        return null;
         
     };
     
@@ -200,6 +227,7 @@
 
     tree.locate(15);
     tree.remove(20);
+    tree.breadthFirstSearch(15);
 
     tree.printPreOrder(tree.root);
     
