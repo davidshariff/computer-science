@@ -52,14 +52,32 @@
         
     };
     
+    Trie.prototype.remove = function(word) {
+        
+        for (var i = 0, current = this.root, len = word.length; i < len; i++) {
+            current = current[word[i]];
+        }
+        
+        // end of word
+        if (current && current.end_of_key === true) {
+            current.end_of_key = false;   
+        }
+        
+    };
+    
     trie = new Trie();
     trie.add('Hello');
     trie.add('Help');
     trie.add('Helper');
+    trie.add('Helped');
     
     trie.isMember('Hex');    // false
     trie.isMember('Helpe');  // false
     trie.isMember('Helper'); // true
     trie.isMember('Help');   // true
+    
+    trie.remove('Help');
+    
+    trie.isMember('Help');   // false
     
 }());
