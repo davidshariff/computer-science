@@ -37,7 +37,7 @@
         else {
             
             var curr = this.head,
-            prev = null;
+                prev = null;
         
             while (curr) {
 
@@ -80,6 +80,26 @@
         
     };
     
+    LinkedList.prototype.nToLast = function(k) {
+        
+        var p1 = this.head,
+            p2 = this.head;
+        
+        // move p2 ahead of p1 by k places
+        for (var i = 0; i < k - 1; i++) {
+             p2 = p2.next;
+        }
+        
+        // keep moving p1 and p2, when p2 hits the end then p1 is k
+        while (p2.next) {
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+        
+        return p1;
+        
+    };
+    
     var myList = new LinkedList();
     
     myList.insert('a');
@@ -87,9 +107,15 @@
     myList.insert('c');
     myList.insert('d');
     myList.insert('e');
+    myList.insert('f');
     
     myList.remove('b');
     myList.find('a');
+    
+    // e
+    myList.nToLast(2);
+    
+    // a->c->d->e->f
     myList.print();
     
 }());
