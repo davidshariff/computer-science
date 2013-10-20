@@ -100,6 +100,30 @@
         
     };
     
+    LinkedList.prototype.reverse = function() {
+        
+        var curr = this.head,
+            prev = null,
+            next = null;
+        
+        while (curr) {
+            
+            // save the ref to next node to move forward later
+            next = curr.next;
+            
+            // break current link, and set it to node before
+            curr.next = prev;
+            
+            // keep traversing the list by moving pointers forward
+            prev = curr;
+            curr = next;
+            
+        }
+        
+        this.head = prev;
+        
+    };
+    
     var myList = new LinkedList();
     
     myList.insert('a');
@@ -115,7 +139,9 @@
     // e
     myList.nToLast(2);
     
-    // a->c->d->e->f
+    myList.reverse();
+    
+    // f->e->d->c->a
     myList.print();
     
 }());
