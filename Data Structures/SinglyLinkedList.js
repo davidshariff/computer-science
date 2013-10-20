@@ -124,6 +124,21 @@
         
     };
     
+    LinkedList.prototype.deleteAtNode = function(node) {
+        
+        // can't delete last node in list
+        if (!node || !node.next) {
+            return false;   
+        }
+        
+        // copy data from next node to the node to be deleted
+        node.data = node.next.data;
+        node.next = node.next.next;
+        
+        return true;
+        
+    };
+    
     var myList = new LinkedList();
     
     myList.insert('a');
