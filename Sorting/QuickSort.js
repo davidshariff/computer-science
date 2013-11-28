@@ -11,7 +11,7 @@
             return inputArr;
         }
         
-        pivot = inputArr;
+        pivot = inputArr[0];
         
         // partition values into upper and lower
         // start at second element, since we are using first element as the pivot
