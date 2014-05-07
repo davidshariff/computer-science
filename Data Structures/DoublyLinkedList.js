@@ -73,7 +73,6 @@
         var curr = this.head;
         
         while (curr) {
-            console.log(curr);
             curr = curr.next;
         }
         
