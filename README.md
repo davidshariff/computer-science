@@ -1,6 +1,6 @@
 #Computer Science in JavaScript
 
-Contains the basic fundamental data structures and algorithms that a front end engineer should know, written all in JavaScript.
+Contains the basic fundamental data structures and algorithms a front end engineer should know, written all in JavaScript.
 
 Front end engineers need to know a mixture of technologies and methodologies from JavaScript, CSS, HTML to design patterns, MVC/MVVM, browser performance and responsive design to name but a few concepts.
 
