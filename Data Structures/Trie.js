@@ -73,7 +73,7 @@
     trie.add('Helper');
     trie.add('Helped');
     
-    trie.isMember('Hexagon');    // false
+    trie.isMember('Hexagon');// false
     trie.isMember('Helpe');  // false
     trie.isMember('Helper'); // true
     trie.isMember('Help');   // true
