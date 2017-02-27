@@ -37,8 +37,10 @@
             var current = this.root;
             
             // walkthrough to the last letter in for the searched word
-            for (var i = 0, len = word.length; i < len; i++) {
+            var i = 0;
+            while (current && i < word.length) {
                 current = current[word[i]];
+                i += 1;
             }
             
             // last letter in the word exists in the trie, and is marked as an end of word
@@ -65,13 +67,13 @@
         
     };
     
-    trie = new Trie();
+    var trie = new Trie();
     trie.add('Hello');
     trie.add('Help');
     trie.add('Helper');
     trie.add('Helped');
     
-    trie.isMember('Hex');    // false
+    trie.isMember('Hexagon');// false
     trie.isMember('Helpe');  // false
     trie.isMember('Helper'); // true
     trie.isMember('Help');   // true
