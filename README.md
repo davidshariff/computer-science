@@ -1,4 +1,4 @@
-#Computer Science in JavaScript
+# Computer Science in JavaScript
 
 Contains the basic fundamental data structures and algorithms a front end engineer should know, written all in JavaScript.
 
@@ -8,7 +8,7 @@ However, Computer Science, and in particular data structures and algorithms are 
 
 Every front end engineer should be able to grasp the fundamentals of the following:
 
-##Data Structures
+## Data Structures
 
 * Binary Trees
 * Doubly Linked Lists
@@ -19,7 +19,7 @@ Every front end engineer should be able to grasp the fundamentals of the followi
 * Stacks
 * Tries
 
-##Sorting Algorithms
+## Sorting Algorithms
 
 * Binary Search
 * Merge Sort
