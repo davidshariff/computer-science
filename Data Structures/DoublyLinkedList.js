@@ -41,7 +41,8 @@
                 if (curr.data === data) {
                     
                     curr.prev.next = curr.next;
-                    curr.next.prev = curr.prev;
+                    if(cur === this.tail) this.tail = cur.prev;
+                    else cur.next.prev = cur.prev;
                     curr = null;
                     
                 }
@@ -88,6 +89,7 @@
     myList.insert('e');
     
     myList.remove('b');
+    myList.remove('e');
     myList.find('a');
     myList.print();
     
