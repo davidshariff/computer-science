@@ -1,4 +1,4 @@
-(function() {
+module.exports = (function() {
     
     var BinaryTree = function() {
             this.root = null;
@@ -216,19 +216,5 @@
         
     };
     
-    var tree = new BinaryTree();
-    tree.insert(20);
-    tree.insert(10);
-    tree.insert(15);
-    tree.insert(16);
-    tree.insert(5);
-    tree.insert(8);
-    tree.insert(25);
-
-    tree.locate(15);
-    tree.remove(20);
-    tree.breadthFirstSearch(15);
-
-    tree.printPreOrder(tree.root);
-    
+    return BinaryTree;
 }());

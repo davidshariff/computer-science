@@ -1,0 +1,17 @@
+{
+  "name": "computer-science",
+  "version": "1.0.0",
+  "description": "Contains the basic fundamental data structures and algorithms a front end engineer should know, written all in JavaScript.",
+  "devDependencies": {
+    "chai": "4.0.2",
+    "mocha": "3.4.2"
+  },
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT"
+}
