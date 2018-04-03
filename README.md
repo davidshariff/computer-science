@@ -1,10 +1,10 @@
 # Computer Science in JavaScript
 
-Contains the basic fundamental data structures and algorithms a front end engineer should know, written all in JavaScript.
+This open source code contains the fundamental data structures and algorithms, written in JavaScript.
 
-Front end engineers need to know a mixture of technologies and methodologies from JavaScript, CSS, HTML to design patterns, MVC/MVVM, browser performance and responsive design to name but a few concepts.
+Front-end engineers should grasp a mixture of technologies and methodologies from JavaScript, CSS, HTML to design patterns, MVC/MVVM, browser performance and names.
 
-However, Computer Science, and in particular data structures and algorithms are often ignored. While you may not use these on a day to day basis, user interfaces are becoming more complex and feature rich. 
+However, data structures and algorithms are often ignored. Programmers may not use data structures and algorithms on a day to day basis; therefore, user interfaces are becoming more complex and feature-rich.
 
 Every front end engineer should be able to grasp the fundamentals of the following:
 
